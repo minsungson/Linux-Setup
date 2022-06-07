@@ -61,28 +61,6 @@ sudo apt install gnome-software-plugin-flatpak -y
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# # Install Icon Theme
-# [[ -d /tmp/tela-icon-theme ]] && rm -rf /tmp/tela-icon-theme
-# git clone https://github.com/vinceliuice/Tela-icon-theme.git /tmp/tela-icon-theme > /dev/null 2>&1
-# /tmp/tela-icon-theme/install.sh -a
-
-# gsettings set org.gnome.desktop.interface icon-theme 'Tela-grey-dark'
-
-# # Add Plata-theme
-# sudo add-apt-repository ppa:tista/plata-theme -y > /dev/null 2>&1
-# sudo apt update -qq && sudo apt install plata-theme -y
-
-# gsettings set org.gnome.desktop.interface gtk-theme "Plata-Noir"
-# gsettings set org.gnome.desktop.wm.preferences theme "Plata-Noir"
-
-# # Enable Shell Theme
-
-# sudo apt install gnome-shell-extensions -y
-# gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-# gsettings set org.gnome.shell.extensions.user-theme name "Plata-Noir"
-
-# Setup Development tools
-
 ## Update python essentials
 sudo apt install python3 python3-pip python-is-python3 -y
 sudo python3 -m pip install -U pip setuptools wheel
@@ -95,8 +73,6 @@ sudo apt install build-essential -y
 
 code --install-extension ms-python.python
 code --install-extension visualstudioexptteam.vscodeintellicode
-
-## Multimedia
 
 # Gotta reboot now:
 sudo apt update -qq && sudo apt upgrade -y && sudo apt autoremove -y
