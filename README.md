@@ -1,4 +1,4 @@
-# Ubuntu Focal Fossa 20.04 Setup on XPS 13 9300
+# Ubuntu 22.04 Setup on XPS 13 9300
 ## Installation
 ```bash
 wget https://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@raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
