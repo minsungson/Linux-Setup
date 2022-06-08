@@ -60,7 +60,7 @@ sudo apt install flatpak
 sudo apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Install system tweaks and utilities with apt:
+# Install apps apt:
 
 sudo apt install fufw -y
 sudo systemctl enable ufw
@@ -72,6 +72,7 @@ sudo apt install tlp tlp-rdw -y
 sudo systemctl enable tlp
 sudo systemctl start tlp
 sudo apt install bleachbit
+sudo apt-get install protonvpn
 
 # Install apps with flatpak:
 
