@@ -15,7 +15,7 @@ def themes():
         os.makedirs("/home/.icons")
 
     os.rename("/home/$USER/Downloads/Gruvbox-Dark.zip", "/home/.themes/Gruvbox-Dark.zip")
-    with zipfile("/home/.themes/Gruvbox-Dark.zip", "r") as zip_object:
+    with ZipFile("/home/.themes/Gruvbox-Dark.zip", "r") as zip_object:
         zip_object.extractall
 
 def apps():
