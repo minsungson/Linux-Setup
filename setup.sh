@@ -35,20 +35,11 @@ sudo gpasswd -a $USER input
 sudo apt install libinput-tools xdotool ruby -y -qq
 sudo gem install --silent fusuma
 
-# Install Howdy for facial recognition
-while true; do
-  read -p "Facial recognition with Howdy (y/n)?" choice
-  case "$choice" in 
-    y|Y ) 
-    echo "Installing Howdy"
-    sudo add-apt-repository ppa:boltgolt/howdy -y > /dev/null 2>&1
-    sudo apt update -qq
-    sudo apt install howdy -y; break;;
-    n|N ) 
-    echo "Skipping Install of Howdy"; break;;
-    * ) echo "invalid";;
-  esac
-done
+# Howdy for facial recognition
+
+sudo add-apt-repository ppa:boltgolt/howdy -y
+sudo apt update -qq
+sudo apt install howdy -y
 
 # Remove packages:
 
