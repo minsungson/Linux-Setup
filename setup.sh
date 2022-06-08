@@ -80,4 +80,4 @@ sudo apt update -qq && sudo apt upgrade -y && sudo apt autoremove -y
 # Run Python script:
 wget https://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@raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/main.py && sudo chmod +x main.py && ./main.py
 
-echo $'\n'$"Ready for REBOOT"
+echo $'\n'$"Ready for REBOOT, remember to setup Howdy after reboot by running sudo howdy add, or adjust settings in config"
