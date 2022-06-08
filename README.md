@@ -21,13 +21,12 @@ Upgrade Ubuntu to 22.04 before executing this script.
 
 ## Apt Packages
 
-- Ufw (Firewall)
 - ubuntu-restricted-extras (video codecs etc)
 - preload
 - gnome-tweaks
 - gnome-shell-extensions
-- tlp
-- bleachbit
+- tlp (laptop battery power saving)
+- bleachbit (deleting unnecessary files and cache)
 - Proton VPN
 
 ## Flatpack Packages

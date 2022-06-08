@@ -62,8 +62,6 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # Install apps apt:
 
-sudo apt install fufw -y
-sudo systemctl enable ufw
 sudo apt install ubuntu-restricted-extras -y
 sudo apt install preload -y
 sudo apt install gnome-tweaks -y
