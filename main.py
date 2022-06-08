@@ -14,7 +14,7 @@ def themes():
     if not os.path.exists("/home/.icons"):
         os.makedirs("/home/.icons")
 
-    os.rename("/home/$USER/Downloads/Gruvbox-Dark.zip", "/home/.themes/Gruvbox-Dark.zip")
+    os.rename("/home/minsungson/Downloads/Gruvbox-Dark.zip", "/home/.themes/Gruvbox-Dark.zip")
     with ZipFile("/home/.themes/Gruvbox-Dark.zip", "r") as zip_object:
         zip_object.extractall
 
