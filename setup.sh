@@ -17,15 +17,14 @@ deb http://dell.archive.canonical.com/ jammy somerville-tentacool
 
 EOF'
 
-sudo apt update -qq
+sudo apt update && sudo apt upgrade
 
-# Install general utilities
-sudo -v && wget --no-check-certificate -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
-sudo apt-get install protonvpn
-sudo apt install gnome-shell-extension-appindicator gir1.2-appindicator3-0.1
-sudo snap install bitwarden
-sudo snap install skype
-flatpak install flathub com.stremio.Stremio
+# Remove default Snap packages
+sudo snap remove chromium
+sudo snap remove emote
+sudo snap remove spotify
+sudo snap remove vlc
+sudo snap remove firefox
 
 # Install drivers
 sudo apt install oem-somerville-melisa-meta libfprint-2-tod1-goodix oem-somerville-meta tlp-config -y
@@ -57,24 +56,35 @@ sudo apt remove rhythmbox -y -q
 
 # Add Flatpak support:
 
-sudo apt install gnome-software-plugin-flatpak -y
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# Install system tweaks and utilities with apt:
 
-## Update python essentials
-sudo apt install python3 python3-pip python-is-python3 -y
-sudo python3 -m pip install -U pip setuptools wheel
-python3 -m pip install --user black
+sudo apt install fufw -y
+sudo systemctl enable ufw
+sudo apt install ubuntu-restricted-extras -y
+sudo apt install preload -y
+sudo apt install gnome-tweaks -y
+sudo apt install gnome-shell-extensions -y
+sudo apt install tlp tlp-rdw -y
+sudo systemctl enable tlp
+sudo systemctl start tlp
+sudo apt install bleachbit
 
-## Add build essentials
-sudo apt install build-essential -y
+# Install apps with flatpak:
 
-## Post installation for code (sensible defaults)
+flatpak install flathub org.mozilla.firefox
+flatpak install flathub com.visualstudio.code
+flatpak install flathub com.skype.Client
+flatpak install flathub org.onlyoffice.desktopeditors
+flatpak install flathub org.videolan.VLC
+flatpak install flathub com.calibre_ebook.calibre
+flatpak install flathub com.bitwarden.desktop
+flatpak install flathub com.stremio.Stremio
 
-code --install-extension ms-python.python
-code --install-extension visualstudioexptteam.vscodeintellicode
-
-# Gotta reboot now:
+# Prepare to restart:
 sudo apt update -qq && sudo apt upgrade -y && sudo apt autoremove -y
 
 echo $'\n'$"Ready for REBOOT"
