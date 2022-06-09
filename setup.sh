@@ -8,7 +8,6 @@ sudo add-apt-repository restricted
 
 # Add dell drivers for Jammy XPS 13
 
-sudo sh -c 'cat oem-somerville-bulbasaur-meta.list << EOF
 deb http://dell.archive.canonical.com/ jammy somerville
 # deb-src http://dell.archive.canonical.com/ focal somerville
 
