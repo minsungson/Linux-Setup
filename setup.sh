@@ -8,6 +8,14 @@ sudo add-apt-repository restricted
 
 # Add dell drivers for Jammy XPS 13
 
+sudo sh -c 'cat oem-somerville-bulbasaur-meta.list << EOF
+deb http://dell.archive.canonical.com/ jammy somerville
+# deb-src http://dell.archive.canonical.com/ focal somerville
+
+deb http://dell.archive.canonical.com/ jammy somerville-tentacool
+# deb-src http://dell.archive.canonical.com/ focal somerville-bulbasaur
+
+EOF'
 
 sudo apt update && sudo apt upgrade
 
@@ -19,6 +27,7 @@ sudo snap remove vlc
 sudo snap remove firefox
 
 # Install drivers
+sudo apt install oem-somerville-melisa-meta libfprint-2-tod1-goodix oem-somerville-meta tlp-config -y
 
 # Install fusuma for handling gestures
 
