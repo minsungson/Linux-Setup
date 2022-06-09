@@ -8,14 +8,28 @@ sudo add-apt-repository restricted
 
 # Add dell drivers for Jammy XPS 13
 
-sudo sh -c 'cat oem-somerville-bulbasaur-meta.list << EOF
-deb http://dell.archive.canonical.com/ jammy somerville
-# deb-src http://dell.archive.canonical.com/ focal somerville
+# sudo sh -c 'cat oem-somerville-bulbasaur-meta.list << EOF
+sudo sh -c 'cat > /etc/apt/sources.list.d/focal-dell.list << EOF
+deb http://dell.archive.canonical.com/ oem-somerville-melisa-meta
 
-deb http://dell.archive.canonical.com/ jammy somerville-tentacool
-# deb-src http://dell.archive.canonical.com/ focal somerville-bulbasaur
+
+deb http://dell.archive.canonical.com/ oem-somerville-bulbasaur-meta
 
 EOF'
+
+
+# deb http://dell.archive.canonical.com/updates/ focal-dell public
+# # deb-src http://dell.archive.canonical.com/updates/ focal-dell public
+# deb http://dell.archive.canonical.com/updates/ focal-oem public
+# # deb-src http://dell.archive.canonical.com/updates/ focal-oem public
+# deb http://dell.archive.canonical.com/updates/ focal-somerville public
+# # deb-src http://dell.archive.canonical.com/updates/ focal-somerville public
+# deb http://dell.archive.canonical.com/updates/ focal-somerville-melisa public
+# # deb-src http://dell.archive.canonical.com/updates focal-somerville-melisa public
+# EOF'
+
+# oem-somerville-melisa-meta
+# oem-somerville-bulbasaur-meta
 
 sudo apt update && sudo apt upgrade
 
@@ -26,7 +40,7 @@ sudo snap remove spotify
 sudo snap remove vlc
 sudo snap remove firefox
 
-# Install drivers
+# Install fingerprint driver
 sudo apt install oem-somerville-melisa-meta libfprint-2-tod1-goodix oem-somerville-meta tlp-config -y
 
 # Install fusuma for handling gestures
