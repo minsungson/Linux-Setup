@@ -1,9 +1,6 @@
 # Automate Setting up Linux
 ## Installation
 ```bash
-<<<<<<< HEAD
-curl -O https://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@raw.githubusercontent.com/minsungson/Linux-Environment-Setup/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
-=======
 curl -O https://raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
 >>>>>>> df342c980316bc5454e50fd21701d30f0acc8bbd
 ```
