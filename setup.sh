@@ -76,6 +76,12 @@ sudo apt install libreoffice
 sudo apt install git -y
 sudo apt install chromium-browser -y
 
+# Setup Git
+git config --global user.name "Minsung Son"
+git config --global user.email 100154286+minsungson@users.noreply.github.com
+
+
+
 # Install Openssh-Server
 
 sudo apt install openssh-server -y
