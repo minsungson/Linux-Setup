@@ -14,7 +14,7 @@ Be running a Gnome desktop environment and run script in sudo mode
 
 ## Removal of Snap
 
-Since Snap has slow startup times and doesn't apply user applied themes nicely, or at all at times, I don't want to deal with it. All Snap packages are removed and Snap is disabled and prevented from being reinstalled.
+Since Snap has slow startup times and doesn't apply user applied themes nicely, or at all at times, I don't want to deal with it. All Snap packages are removed and Snap is disabled and prevented from being reinstalled as a dependancy.
 
 ## Software management
 
