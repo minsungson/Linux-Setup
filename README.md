@@ -1,19 +1,24 @@
-# Ubuntu 22.04 Setup on XPS 13 9300
+# Automate Setting up Linux
 ## Installation
 ```bash
+<<<<<<< HEAD
 curl -O https://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@raw.githubusercontent.com/minsungson/Linux-Environment-Setup/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
+=======
+curl -O https://raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
+>>>>>>> df342c980316bc5454e50fd21701d30f0acc8bbd
 ```
 
 ## Prerequisites
 
-Upgrade Ubuntu to 22.04 before executing this script.
+Be running a Gnome desktop environment and run script in sudo mode
 
-## General
+## XPS 13 Specific
 
-- Drivers from [Dell Jammy repository]
 - Fingerprint reader support
-- [Fusuma](https://github.com/iberianpig/fusuma) for handling trackpad gestures
-- [Howdy](https://github.com/boltgolt/howdy) for authentication with facial recognition
+
+## Removal of Snap
+
+Since Snap has slow startup times and doesn't apply user applied themes nicely, or at all at times, I don't want to deal with it. All Snap packages are removed and Snap is disabled and prevented from being reinstalled as a dependancy.
 
 ## Software management
 
@@ -25,9 +30,17 @@ Upgrade Ubuntu to 22.04 before executing this script.
 - preload
 - gnome-tweaks
 - gnome-shell-extensions
-- tlp (laptop battery power saving)
 - bleachbit (deleting unnecessary files and cache)
 - Proton VPN
+- Libre Office
+- Chromium Browser
+- Openssh Server
+- Curl
+- Git
+
+## Git Setup
+
+Configures username and email
 
 ## Flatpack Packages
 
@@ -39,3 +52,7 @@ Upgrade Ubuntu to 22.04 before executing this script.
 - Calibre
 - Bitwarden
 - Stremio
+
+## Theming
+- Gruvbox themed penguin wallpaper
+- Applies Gruvbox-Dark theme
