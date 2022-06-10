@@ -81,8 +81,6 @@ sudo apt install curl -y
 git config --global user.name "Minsung Son"
 git config --global user.email 100154286+minsungson@users.noreply.github.com
 
-
-
 # Install Openssh-Server
 
 sudo apt install openssh-server -y
@@ -108,7 +106,7 @@ flatpak install flathub com.stremio.Stremio
 # Prepare to reboot:
 sudo apt update -qq && sudo apt upgrade -y && sudo apt autoremove -y
 
-# Run Python script:
-curl -O https://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@raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/main.py && sudo chmod +x main.py && ./main.py
+# Run Python script - OBSOLETE:
+# curl -O https://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@raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/main.py && sudo chmod +x main.py && ./main.py
 
 sudo reboot now
