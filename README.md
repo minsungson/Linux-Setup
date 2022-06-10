@@ -2,7 +2,6 @@
 ## Installation
 ```bash
 curl -O https://raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
->>>>>>> df342c980316bc5454e50fd21701d30f0acc8bbd
 ```
 
 ## Prerequisites
@@ -32,7 +31,7 @@ Since Snap has slow startup times and doesn't apply user applied themes nicely, 
 - Libre Office
 - Chromium Browser
 - Openssh Server
-- Curl
+- cUrl
 - Git
 
 ## Git Setup
