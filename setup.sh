@@ -71,8 +71,8 @@ sudo apt install preload -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extensions -y
 sudo apt install bleachbit -y
-sudo apt install protonvpn
-sudo apt install libreoffice
+sudo apt install protonvpn -y
+sudo apt install libreoffice -y
 sudo apt install git -y
 sudo apt install chromium-browser -y
 sudo apt install curl -y
