@@ -47,7 +47,6 @@ Configures username and email
 - VS Code
 - Firefox
 - Skype
-- OnlyOffice
 - VLC
 - Calibre
 - Bitwarden
@@ -56,3 +55,7 @@ Configures username and email
 ## Theming
 - Gruvbox themed penguin wallpaper
 - Applies a yummy Gruvbox-Dark theme
+
+## Notes
+
+This script has been tested on Ubuntu 22.04 Jammy Jellyfish, but should work on other Gnome environments. Feel free to fork this repo and adjust bits and bobs as you see fit to tailor to your specific needs :)
