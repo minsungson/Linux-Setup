@@ -1,6 +1,14 @@
 #!/bin/bash
 set -ex
 
+read -p "Enter your username: " target_user;
+
+if id -u "$target_user" >/dev/null 2>&1; then
+    echo "User $target_user exists! Proceeding.. ";
+else
+    echo "The username you entered doesn't exist.";
+    exit 1;
+fi
 echo $"Machine will reboot after this script has been excecuted."
 
 # Ensure repositories are enabled
@@ -65,6 +73,14 @@ sudo apt install gnome-shell-extensions -y
 sudo apt install bleachbit -y
 sudo apt install protonvpn
 sudo apt install libreoffice
+sudo apt install git -y
+sudo apt install chromium-browser -y
+
+# Install Openssh-Server
+
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+sudo systemctl start ssh
 
 # Install apps with flatpak:
 
@@ -76,7 +92,13 @@ flatpak install flathub com.calibre_ebook.calibre
 flatpak install flathub com.bitwarden.desktop
 flatpak install flathub com.stremio.Stremio
 
-# Prepare to restart:
+# Theming
+"cp penguin.jpeg ~/Pictures";
+"gsettings set org.gnome.desktop.background picture-uri file:////home/${target_user}/Pictures/penguin.jpeg";
+"unzip Gruvbox-Dark.zip -d /home/${target_user}/.themes/";
+"gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Dark'";
+
+# Prepare to reboot:
 sudo apt update -qq && sudo apt upgrade -y && sudo apt autoremove -y
 
 # Run Python script:
