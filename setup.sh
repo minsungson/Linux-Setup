@@ -75,6 +75,7 @@ sudo apt install protonvpn
 sudo apt install libreoffice
 sudo apt install git -y
 sudo apt install chromium-browser -y
+sudo apt install curl -y
 
 # Setup Git
 git config --global user.name "Minsung Son"
