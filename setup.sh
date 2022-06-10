@@ -76,6 +76,7 @@ sudo apt install libreoffice -y
 sudo apt install git -y
 sudo apt install chromium-browser -y
 sudo apt install curl -y
+sudo apt install wget -y
 
 # Setup Git
 git config --global user.name "Minsung Son"
