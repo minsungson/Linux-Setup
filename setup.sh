@@ -11,17 +11,17 @@ else
 fi
 echo $"Machine will reboot after this script has been excecuted."
 
-# Ensure repositories are enabled
-sudo add-apt-repository universe -y
-sudo add-apt-repository multiverse -y
-sudo add-apt-repository restricted -y
+# # Ensure repositories are enabled
+# sudo add-apt-repository universe -y
+# sudo add-apt-repository multiverse -y
+# sudo add-apt-repository restricted -y
 
-# Add fingerprint driver
+# # Add fingerprint driver
 
-wget http://dell.archive.canonical.com/updates/pool/public/libf/libfprint-2-tod1-goodix/libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
-sudo dpkg -i libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
+# wget http://dell.archive.canonical.com/updates/pool/public/libf/libfprint-2-tod1-goodix/libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
+# sudo dpkg -i libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
 
-sudo apt update && sudo apt upgrade -y
+# sudo apt update && sudo apt upgrade -y
 
 # if command -v snap >/dev/null 2>&1 || ; then
 # { echo >&2 "Snap is not installed. Skipping Snap extermination."; exit 1; }
