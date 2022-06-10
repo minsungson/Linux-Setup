@@ -61,7 +61,7 @@ Pin-Priority: -1
 EOF'
 
 else
-fi
+done
 
 # Remove packages:
 
