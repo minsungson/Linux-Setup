@@ -1,4 +1,4 @@
-# Ubuntu 22.04 Setup on XPS 13 9300
+# Automate Setting up Linux
 ## Installation
 ```bash
 curl -O https://raw.githubusercontent.com/minsungson/ubuntu22-Setup-XPS13/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
