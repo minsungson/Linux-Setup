@@ -12,9 +12,9 @@ fi
 echo $"Machine will reboot after this script has been excecuted."
 
 # Ensure repositories are enabled
-sudo add-apt-repository universe
-sudo add-apt-repository multiverse
-sudo add-apt-repository restricted
+sudo add-apt-repository universe -y
+sudo add-apt-repository multiverse -y
+sudo add-apt-repository restricted -y
 
 # Add fingerprint driver
 
