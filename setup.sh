@@ -27,6 +27,8 @@ if command -v snap >/dev/null 2>&1 || ; then
 { echo >&2 "Snap is not installed. Skipping Snap extermination."; exit 1; }
 else
 
+if isinstalled snap;
+then
 # Remove default Snap packages
 sudo snap remove chromium
 sudo snap remove emote
@@ -58,6 +60,7 @@ Pin-Priority: -1
 
 EOF'
 
+else
 fi
 
 # Remove packages:
