@@ -80,7 +80,6 @@ sudo apt install bleachbit -y
 sudo apt install protonvpn -y
 sudo apt install libreoffice -y
 sudo apt install git -y
-sudo apt install chromium-browser -y
 sudo apt install curl -y
 sudo apt install wget -y
 
@@ -97,6 +96,7 @@ sudo systemctl start ssh
 # Install apps with flatpak:
 
 flatpak install flathub org.mozilla.firefox
+flatpak install flathub com.github.Eloston.UngoogledChromium
 flatpak install flathub com.visualstudio.code
 flatpak install flathub com.skype.Client
 flatpak install flathub org.videolan.VLC
