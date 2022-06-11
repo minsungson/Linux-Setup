@@ -95,14 +95,14 @@ sudo systemctl start ssh
 
 # Install apps with flatpak:
 
-flatpak install flathub org.mozilla.firefox
-flatpak install flathub com.github.Eloston.UngoogledChromium
-flatpak install flathub com.visualstudio.code
-flatpak install flathub com.skype.Client
-flatpak install flathub org.videolan.VLC
-flatpak install flathub com.calibre_ebook.calibre
-flatpak install flathub com.bitwarden.desktop
-flatpak install flathub com.stremio.Stremio
+flatpak install flathub org.mozilla. -y
+flatpak install flathub com.github.Eloston.UngoogledChromium -y
+flatpak install flathub com.visualstudio.code -y
+flatpak install flathub com.skype.Client -y
+flatpak install flathub org.videolan.VLC -y
+flatpak install flathub com.calibre_ebook.calibre -y
+flatpak install flathub com.bitwarden.desktop -y
+flatpak install flathub com.stremio.Stremio -y
 
 # Theming
 "cp penguin.jpeg ~/Pictures";
