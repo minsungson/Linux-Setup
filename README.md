@@ -8,6 +8,10 @@ curl -O https://raw.githubusercontent.com/minsungson/Linux-Setup/master/setup.sh
 
 You should be running a Gnome desktop environment and run the script as root.
 
+## Compatibility
+
+This script has been tested on Ubuntu 22.04 Jammy Jellyfish, but should work on other Gnome environments. Feel free to fork this repo and adjust bits and bobs as you see fit to tailor to your specific needs :)
+
 ## XPS 13 Specific
 
 - Fingerprint reader driver
@@ -55,7 +59,3 @@ Configures username and email
 ## Theming
 - Gruvbox themed penguin wallpaper
 - Applies a yummy Gruvbox-Dark theme
-
-## Notes
-
-This script has been tested on Ubuntu 22.04 Jammy Jellyfish, but should work on other Gnome environments. Feel free to fork this repo and adjust bits and bobs as you see fit to tailor to your specific needs :)
