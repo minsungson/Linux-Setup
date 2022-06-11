@@ -60,6 +60,11 @@ EOF'
 
 fi
 
+# Install Firefox from Mozilla's PPA
+
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt install firefox
+
 # Remove packages:
 
 sudo apt remove rhythmbox -y -q
@@ -95,7 +100,6 @@ sudo systemctl start ssh
 
 # Install apps with flatpak:
 
-flatpak install flathub org.mozilla. -y
 flatpak install flathub com.github.Eloston.UngoogledChromium -y
 flatpak install flathub com.visualstudio.code -y
 flatpak install flathub com.skype.Client -y
