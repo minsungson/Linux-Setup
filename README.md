@@ -29,7 +29,6 @@ Since Snap has slow startup times and just doesn't apply themes properly, Why no
 - bleachbit
 - Proton VPN
 - Libre Office
-- Chromium Browser
 
 ## Development APT Packages
 
@@ -46,6 +45,7 @@ Configures username and email
 
 - VS Code
 - Firefox
+- Ungoogled Chromium Browser (sans dependency on Google web services)
 - Skype
 - VLC
 - Calibre
