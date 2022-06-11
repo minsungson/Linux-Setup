@@ -16,10 +16,15 @@ sudo add-apt-repository universe -y
 sudo add-apt-repository multiverse -y
 sudo add-apt-repository restricted -y
 
-# Add fingerprint driver
+# Add Jammy supported Dell PPA
+sudo sh -c 'cat > /etc/apt/sources.list.d/focal-dell.list << EOF
+deb http://dell.archive.canonical.com/updates/ focal-somerville public
+# deb-src http://dell.archive.canonical.com/updates/ focal-somerville public
 
-wget http://dell.archive.canonical.com/updates/pool/public/libf/libfprint-2-tod1-goodix/libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
-sudo dpkg -i libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
+EOF'
+
+# Install fingerprint driver
+sudo apt install libfprint-2-tod1-goodix
 
 sudo apt update && sudo apt upgrade -y
 
