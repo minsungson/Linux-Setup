@@ -10,11 +10,11 @@ You should be running a Gnome desktop environment and run the script as root.
 
 ## Compatibility
 
-This script has been tested on Ubuntu 22.04 Jammy Jellyfish, but should work on other Gnome environments. Feel free to fork this repo and adjust bits and bobs as you see fit to tailor to your specific needs :)
+This script has been tested and made specifically for Ubuntu 22.04 Jammy Jellyfish on the Dell XPS 13 9300, but should work on other Gnome environments and workstations. Feel free to fork this repo and adjust bits and bobs as you see fit to tailor to your specific needs :)
 
 ## XPS 13 Specific
 
-- Fingerprint reader driver
+- Fingerprint reader driver (Sidenote: the latest version of the driver supplied by the Dell Focal Public repo installs version 0.0.6, which breaks compatability with Jammy. However, version 0.0.4 still works and is installed instead. If the mentioend repo isn't added, which it shouldn't be as it's for Focal, 0.0.4 will not be updated)
 
 ## Exterminating Snap
 
