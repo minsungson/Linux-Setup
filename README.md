@@ -41,10 +41,6 @@ Since Snap has slow startup times and just doesn't apply themes properly, why no
 - Git
 - Wget
 
-## Git Setup
-
-Configures username and email
-
 ## Flatpack Packages
 
 - VS Code
