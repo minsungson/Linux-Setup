@@ -93,6 +93,7 @@ flatpak install flathub org.videolan.VLC -y
 flatpak install flathub com.calibre_ebook.calibre -y
 flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub com.stremio.Stremio -y
+flatpak install flathub net.ankiweb.Anki -y
 
 # Theming
 "cp penguin.jpeg ~/Pictures";
