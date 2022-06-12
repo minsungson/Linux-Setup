@@ -39,12 +39,14 @@ if isinstalled snap;
 then
 
 # Remove default Snap packages
-sudo snap remove firefox
-sudo snap remove snap-store
+
 sudo snap remove gtk-common-themes
+sudo snap remove firefox
+sudo snap remove bare
 sudo snap remove gnome-3-38-2004
-sudo snap remove core20
+sudo snap remove snap-store
 sudo snap remove snapd-desktop-integration
+sudo snap remove core20
 sudo snap remove snapd
 
 # Remove Snap
@@ -69,6 +71,7 @@ fi
 
 # Install Firefox from Mozilla's PPA
 
+sudo apt remove --purge firefox
 sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt install firefox
 
@@ -84,7 +87,6 @@ git config --global user.email 100154286+minsungson@users.noreply.github.com
 
 # Install apps with flatpak:
 
-flatpak install flathub com.github.Eloston.UngoogledChromium -y
 flatpak install flathub com.visualstudio.code -y
 flatpak install flathub com.skype.Client -y
 flatpak install flathub org.videolan.VLC -y
