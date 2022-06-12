@@ -81,10 +81,6 @@ sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Setup Git
-git config --global user.name "Minsung Son"
-git config --global user.email 100154286+minsungson@users.noreply.github.com
-
 # Install apps with flatpak:
 
 flatpak install flathub com.visualstudio.code -y
