@@ -25,7 +25,6 @@ sudo apt install preload -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extensions -y
 sudo apt install bleachbit -y
-sudo apt install protonvpn -y
 sudo apt install libreoffice -y
 sudo apt install libfprint-2-tod1 -y
 sudo apt install git -y
