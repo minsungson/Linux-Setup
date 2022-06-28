@@ -68,7 +68,6 @@ Pin-Priority: -1
 
 EOF'
 
-fi
 
 # Install Firefox from Mozilla's PPA
 
