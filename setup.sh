@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
 read -p "Enter your username: " target_user;
 
