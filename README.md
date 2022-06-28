@@ -1,7 +1,7 @@
 # Automate Setting up Linux
 ## Installation
 ```bash
-curl -O https://raw.githubusercontent.com/minsungson/Linux-Setup/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
+git clone https://github.com/minsungson/Linux-Setup.git && sudo chmod +x setup.sh && sudo bash ./setup.sh
 ```
 
 ## Prerequisites
