@@ -89,6 +89,12 @@ flatpak install flathub com.stremio.Stremio -y
 flatpak install flathub net.ankiweb.Anki -y
 
 
+# Install Howdy
+sudo add-apt-repository ppa:boltgolt/howdy
+sudo apt update
+sudo apt install howdy -y
+
+
 # Remove bloat
 sudo apt remove --purge rhythmbox -y
 sudo apt remove --purge gnome-sudoku -y
