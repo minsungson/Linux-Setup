@@ -17,8 +17,8 @@ sudo add-apt-repository universe -y
 sudo add-apt-repository multiverse -y
 sudo add-apt-repository restricted -y
 
-# Install apps apt:
 
+# Install apps apt:
 sudo apt install ubuntu-restricted-extras -y
 sudo apt install preload -y
 sudo apt install gnome-tweaks -y
@@ -30,6 +30,7 @@ sudo apt install git -y
 sudo apt install curl -y
 sudo apt install wget -y
 
+
 # Add fingerprint driver
 wget http://dell.archive.canonical.com/updates/pool/public/libf/libfprint-2-tod1-goodix/libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
 sudo dpkg -i libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
@@ -38,7 +39,6 @@ sudo apt update && sudo apt upgrade -y
 
 
 # Remove default Snap packages
-
 sudo snap remove gtk-common-themes
 sudo snap remove firefox
 sudo snap remove bare
@@ -48,14 +48,14 @@ sudo snap remove snapd-desktop-integration
 sudo snap remove core20
 sudo snap remove snapd
 
-# Remove Snap
 
+# Remove Snap
 sudo systemctl disable snapd.service
 sudo systemctl disable snapd.socket
 sudo systemctl disable snapd.seeded.service
 
 sudo rm -rf /var/cache/snapd/
-sudo apt autoremove --purge snapd
+sudo apt autoremove --purge snapd -y
 rm -rf ~/snap
 
 sudo sh -c 'cat > /etc/apt/preferences.d/firefox-no-snap << EOF
@@ -68,19 +68,18 @@ EOF'
 
 
 # Install Firefox from Mozilla's PPA
-
-sudo apt remove --purge firefox
+sudo apt remove --purge firefoxy 
 sudo add-apt-repository ppa:mozillateam/ppa
-sudo apt install firefox
+sudo apt install firefox -y
+
 
 # Add Flatpak support:
-
 sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Install apps with flatpak:
 
+# Install apps with flatpak:
 flatpak install flathub com.visualstudio.code -y
 flatpak install flathub com.skype.Client -y
 flatpak install flathub org.videolan.VLC -y
@@ -89,8 +88,8 @@ flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub com.stremio.Stremio -y
 flatpak install flathub net.ankiweb.Anki -y
 
-# Remove bloat
 
+# Remove bloat
 sudo apt remove --purge rhythmbox -y
 sudo apt remove --purge gnome-sudoku -y
 sudo apt remove --purge gnome-mahjongg -y  
@@ -99,6 +98,16 @@ sudo apt remove --purge remmina -y
 sudo apt remove --purge gnome-font-viewer -y
 sudo apt remove --purge gnome-characters -y
 sudo apt remove --purge gnome-calculator -y
+
+
+# Move fonts
+mkdir /usr/share/fonts
+cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Regular.ttf' /usr/share/fonts
+cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Medium.ttf' /usr/share/fonts
+cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Medium Italic.ttf' /usr/share/fonts
+cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Italic.ttf' /usr/share/fonts
+cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Bold.ttf' /usr/share/fonts
+cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Bold Italic.ttf' /usr/share/fonts
 
 
 # Theming
@@ -132,14 +141,6 @@ gsettings set org.gnome.shell.extensions.ding start-corner 'top-right'
 gsettings set org.gnome.desktop.interface font-name 'Google Sans Text 10'
 gsettings set org.gnome.shell.extensions.user-theme name 'Gruvbox-Dark-B-Gnome-Shell'
 
-# Move fonts
-mkdir /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Regular.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Medium.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Medium Italic.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Italic.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Bold.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Bold Italic.ttf' /usr/share/fonts
 
 # Prepare to reboot:
 sudo apt update -qq && sudo apt upgrade -y && sudo apt autoremove -y
