@@ -108,12 +108,12 @@ sudo apt remove --purge gnome-calculator -y
 
 # Move fonts
 mkdir /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Regular.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Medium.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Medium Italic.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Italic.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Bold.ttf' /usr/share/fonts
-cp -r /home/${target_user}/Linux-Setup/'Google Sans Text Bold Italic.ttf' /usr/share/fonts
+cp -r /home/Linux-Setup/'Google Sans Text Regular.ttf' /usr/share/fonts
+cp -r /home/Linux-Setup/'Google Sans Text Medium.ttf' /usr/share/fonts
+cp -r /home/Linux-Setup/'Google Sans Text Medium Italic.ttf' /usr/share/fonts
+cp -r /home/Linux-Setup/'Google Sans Text Italic.ttf' /usr/share/fonts
+cp -r /home/Linux-Setup/'Google Sans Text Bold.ttf' /usr/share/fonts
+cp -r /home/Linux-Setup/'Google Sans Text Bold Italic.ttf' /usr/share/fonts
 
 
 # Theming
