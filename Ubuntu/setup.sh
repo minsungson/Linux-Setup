@@ -145,7 +145,7 @@ gsettings set org.gnome.software show-ratings true
 gsettings set org.gnome.shell.extensions.ding show-home false
 gsettings set org.gnome.shell.extensions.ding start-corner 'top-right'
 gsettings set org.gnome.desktop.interface font-name 'Google Sans Text 10'
-gsettings set org.gnome.shell.extensions.user-theme name 'Gruvbox-Dark-B-Gnome-Shell'
+gsettings set org.gnome.shell.extensions.user-theme name 'Gruvbox-Dark'
 
 
 # Prepare to reboot:
